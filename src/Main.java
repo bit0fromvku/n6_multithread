@@ -5,6 +5,11 @@ public class Main {
         Counter c1=new Counter();
         Counter c2=new Counter();
         c1.start();
+        try {
+            c1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         c2.start();
     }
     public static void main(String[] args) {
